@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cnn-classifier-1"
+version = "0.0.1"
+description = "A small package for CNN-based chicken disease classification application"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Affan005-ai", email = "affannadeem005@gmail.com" }
+]
+dependencies = [
+  "tensorflow",
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "scikit-learn",
+  "seaborn",
+  "dvc",
+  "flask",
+  "flask-cors",
+  "joblib",
+  "pyyaml",
+  "tqdm",
+  "python-box==6.0.2",
+  "ensure==1.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "notebook",
+  "types-pyyaml",
+]
+
+[project.urls]
+Homepage = "https://github.com/Affan005-ai/Chicken-Disease-Classification-DL--project"
+"Bug Tracker" = "https://github.com/Affan005-ai/Chicken-Disease-Classification-DL--project/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
